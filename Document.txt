@@ -1,0 +1,20 @@
+No critical vulnerabilty
+
+Medium Vulnerability
+Severity:Medium
+ID:57608
+Version:1.20
+Type:remote
+Family:Misc.
+Published:January 19, 2012
+Modified:October 5, 2022
+
+Solution:
+
+SMB Signing not required
+
+Description
+Signing is not required on the remote SMB server. An unauthenticated, remote attacker can exploit this to conduct man-in-the-middle attacks against the SMB server.
+
+Solution
+Enforce message signing in the host's configuration. On Windows, this is found in the policy setting 'Microsoft network server: Digitally sign communications (always)'. On Samba, the setting is called 'server signing'. See the 'see also' links for further details.
